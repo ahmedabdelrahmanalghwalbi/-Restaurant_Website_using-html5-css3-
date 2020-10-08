@@ -1,0 +1,530 @@
+* {
+     font-family: sans-serif;
+}
+
+
+/* start container */
+.container {width: 1140px;margin: 0 auto;}
+/* end container */
+
+/* start header */
+
+.header {
+    background: #f8f9fa;
+    border-bottom-left-radius: 170px;
+    border-bottom-right-radius: 170px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 0px 5px #555555de;
+}
+header { display: flex; justify-content: space-between;position: relative;}
+header .image {padding: 10px 0; }
+header .image img { margin-left: 100px;width: 124px; height: 68px;}
+header nav{margin-right: 70px;}
+header nav ul {margin: 0;}
+header nav ul li {list-style:none; display: inline-block; margin: 30px 0px 30px 0;}
+
+header nav ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.1s ease-in-out;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+header nav ul li.active a ,
+header nav ul li a:hover{background: #D65106;color: #fff;}
+
+/* end header */ 
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+/* start slider */
+
+.contain { width: 100%; position: relative; overflow: hidden;}
+.slider { width: 400%; height: 100vh; animation: slider 15s ease-in-out infinite  ; position: relative;}
+.slide{ width:25%;float: left;height: 100vh;position: relative; z-index: 2;}
+.slide img {width: 100%; height: 100vh;}
+@keyframes slider {
+    
+    0% {
+        left: 0;
+    }
+    
+    12.5% {
+        left: 0;
+    }
+    
+    25% {
+        left: -100% 
+    }
+    
+    37.5% {
+        left: -100% 
+    }
+    
+    50% {
+        left: -200%;
+    }
+    
+    62.5% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+    
+    87.5% {
+        left: -300%;
+    }
+    
+    100% {
+        left: -300%;
+    }
+}
+
+.color {
+    padding-left: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    background: #5E5E5E78;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.color h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    margin: 0px 0px 25px 0px;
+    color: #fff;
+    font-family: cursive;
+}
+.color p { color: #fff;width:40%;line-height: 1.7;} 
+.color button {
+    padding: 10px;
+    background: #D65106 ;
+    color: #FFF;
+    width: 15%;
+    height: 43px;
+    border-radius: 15px;
+    border: none;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+
+/* end slider */
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+/* Start article */
+
+.parent {width: 100%;height: 500px;}
+.parent .background {padding: 20px 0;background: url('../images/about-bg.jpg') bottom center;background-size: cover;height:450px;background-repeat: no-repeat;}
+.child {width: 100%;padding: 20px; display: flex;}
+.child > article,
+.child > div{width: 35%;margin-left: 80px;}
+.child article h2 {font-family: arial;font-size: 25px;text-transform: capitalize;margin: 10px 0;}
+.child article h2 span {color: #D65106;}
+.child article p {line-height:1.7;margin: 5px 0;}
+.child article button {
+    padding: 10px;
+    background: #D65106 ;
+    color: #FFF;
+    width: 35%;
+    height: 43px;
+    border-radius: 15px;
+    border: none;
+    text-transform: capitalize;
+    font-family: arial;
+    margin-top: 10px;
+}
+.child .pic{padding-top: 13px;padding-right: 10px;}
+.child .pic img {width: 120%;box-shadow: 20px 20px 0 #D65106}
+
+/* End article */
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+/* Start main */
+
+main {width:100%;height: 300px;background: url('../images/qt-bg.jpg') fixed ;background-size:cover;}
+main .describe {height: 100%;display: flex;justify-content: center;align-items: center;text-align: center;padding: 70px 0;}
+main .describe > div {width: 58%;}
+main .describe > div p{font-size: 26px;color: #FFF;font-family: arial;letter-spacing: 1.7px;}
+main .describe > div h2 {color: #FFF;font-family: arial;}
+
+/* End main */
+
+/* ----------------------------------------------------------------------------------------------------------*/
+
+/* Start gallery */
+
+.special{padding-top: 30px;text-align: center;}
+.special p{color: #666666;font-size: 14px;}
+.special h2{font-size: 22px;font-weight:700}
+.cont-gall{display: flex;flex-direction: row-reverse;}
+.child-gall{
+    width: 91%;
+    height: 520px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 133px;
+    box-sizing: border-box;
+    margin-left: 49px;
+    margin-top: 40px;
+    flex-wrap: wrap;   
+}
+.gallery{width: 33%;position: relative;margin-right: -55px;}
+.gallery img{width: 100%;height: 152px;}
+.gallery  .pictures{
+    position: absolute;
+    top: 0;
+    width:220px;
+    height: 1px;
+    background: rgba(192, 153, 104, 0.90);
+    transition: all .4s ease-in-out;
+    transform: translateY(152px);
+    transform-origin: bottom right;
+    z-index: 3;
+    visibility: hidden;
+    color: #fff;
+    padding-left: 10px;
+    overflow: hidden;
+   
+}
+.gallery:hover .pictures{transform: scaleY(1);z-index: 4;height: 153px;visibility: visible;}
+.gallery .pictures h2{position: absolute;top: 0px;font-size: 14px;font-family: arial;margin-top: 15px;}
+.gallery .pictures p{position: absolute;top: 38px;font-size: 15px;}
+.gallery .pictures hr {position: absolute;top: 103px;width: 91%;border-style: dashed;color: #333;}
+.gallery .pictures span {position: absolute;top: 127px;font-weight: bold;}
+aside{height: 200px;width:29%;margin-right: 10px;margin-top: 40px;}
+aside button {
+    display: block;
+    padding: 14px;
+    width: 100%;
+    text-align: left;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 5px
+}
+aside button:hover ,
+aside .active2{background: #D65106;color: #fff;}
+
+/* End gallery */
+
+/*-------------------------------------------------------------------------------------------------*/
+
+/* Start portfoilio */
+
+.portfolio .p-image {
+    width: 80%;
+    height: 340px;
+  
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 33px;
+    box-sizing:border-box;
+        
+}
+
+.portfolio .p-image > div{
+    width:30.33%;
+    height:160px;
+    margin-right:20px;
+    margin-bottom: 15px;
+    outline: 2px solid #D65106;
+    float: left;
+    perspective: 1000px;
+   
+}
+
+.portfolio .p-image img {
+    width: 100%;
+    height:160px;
+    transition: all .3s ease-in-out;
+}
+
+.portfolio .p-image img:hover{
+    transform: translatez(40px);
+    box-shadow:0px 0px 15px ;
+}
+
+/* End portfolio */
+
+/* Start information*/
+.content {
+    width: 100%;
+    height: 210px;
+    margin-top: 75px;
+    position: relative;
+    overflow: hidden;
+}
+
+.content .parent {
+    width: 300%;
+    position: relative;
+    text-align:center;
+    animation: animate 10s ease-in-out infinite;
+    transition: all 5s ease-in-out    
+}
+
+.content .parent div {
+    width:33.33%;
+    
+    float:left;
+}
+
+.content .parent div img {
+    width: 80px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #FFF;
+    padding: 3px;
+}
+.content .parent div h3{
+    margin:0px;
+    margin-bottom:5px
+}    
+
+.content .parent div span {
+    font-size:10px;
+    display: inline-block;
+    margin-left:5px;
+}
+
+.content .parent div p{
+    width: 53%;
+    margin-left: 328px;
+    margin-top: 11px;
+    font-size: 15px;
+    color: #666;
+}
+
+
+
+@keyframes animate {
+    
+    0%{
+        right: 0;
+    }
+    
+    15% {
+        right:0;
+    }
+    
+    30% {
+        right: 100%;
+    }
+    
+    45% {
+        right: 100%
+    }
+    
+    60%{
+        right: 200%;
+    }
+    
+    75%{
+        200%;
+    }
+    
+    90% {
+        300%;
+    }
+    
+    100%{
+        300%;
+    }
+} 
+
+/* End information */
+
+/* Start contct*/
+.contact {
+    width: 100%;
+    margin-top: 40px;
+    background: #D65106;
+    border-radius:90px;
+    overflow: hidden;
+}
+
+.contact-contet {
+    width: 100%;
+    border-radius: 70px;
+    
+}
+
+.icons {
+    width: 30%;
+    height: 100%;
+   padding-left: 20px;
+    box-sizing: border-box;
+    padding: 25px 0;
+    float: left;
+}
+
+
+.icons i {
+    padding: 20px;
+    font-size:25px;
+    margin-right: 10px;
+    margin-left:101px;
+    color:#D65106;
+    background: #fff;
+    border-radius:10px;
+}
+
+.icons h3 {margin:0 0 5px 0; display: inline-block; vertical-align:top; margin-top:5px; color: #fff; text-transform: capitalize;}
+
+.icons .mg0{
+    display: inline-block;
+    margin-left: -61px;
+    margin-top:30px;
+    color:#FFF
+}
+
+
+
+.mg{
+    display: inline-block;
+    margin-left: -53px;
+    margin-top:30px;  
+    color:#fff;
+}  
+
+.mg2{
+    display: inline-block;
+    margin-left: -76px;
+    margin-top:30px;
+    color:#FFF
+}
+
+/* End contct*/
+
+/*Start footer*/
+.about-us {
+    
+    background: url('../images/footer-bg.jpg') 0px -97px;
+    background-size:cover;
+}
+.about-us-content {
+    display: flex;
+    width: 100%;
+    padding: 20px 0 10px;
+}
+
+.about-us-content div {
+    width: 22%;
+    color: #fff;
+    padding-right: 30px;
+}
+
+ .h3 {
+    text-transform:uppercase;
+    margin-bottom:6px
+}
+
+.hr{
+    color:#6A5539
+}
+
+.p{
+    line-height:1.6;
+    color:#C0C7BF
+}
+
+.subscribe form input {
+    padding: 12px 0 12px 8px;
+    width: 242px;
+    margin-top:16px ;
+    background: none;
+    color:#C0C7BF;
+    text-transform:capitalize;
+    border: 1px solid #FFF;
+}
+
+.subscribe button {
+    width:252px;
+    padding:12px 0 12px;
+    margin-bottom: 30px;
+    border:none;
+    background: #D65106;
+    text-transform:uppercase;
+    color:#FFF;
+    transition: all .6s ease-in-out;
+    font-weight: 700;
+}
+
+.subscribe button:hover{
+    background: #070301;
+}
+
+.subscribe .icon{
+    width:90%;
+}
+
+.subscribe .icon i {
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    width: 6%;
+    margin: 4px;
+    color:#D65106
+}
+
+.contact-information a{
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #FFF
+}
+
+.opening-hours span{
+    display:block;
+    margin: 15px 0;
+    color:#C0C7BF;
+}
+
+.about-us > .color2 {
+    height: 100%;
+    background:#5E5E5E78 
+}
+
+footer{
+    text-align: center;
+    padding: 40px 0;
+    background: #010101
+}
+
+footer span{
+    color:#C0C7BF;
+    text-transform: capitalize;
+}
+
+.hr2{
+    margin: 0;
+    color:#cc8628
+}
+footer span a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    transition: all 0.4s linear 
+}
+
+footer span a:hover{
+    color: #D65106;
+}
+/* End footer */
